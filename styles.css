@@ -1,0 +1,93 @@
+/* Paramètre généraux */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /*Bordure à l'interieur de la boite*/
+}
+/* Variables */
+:root {
+  --color-one: black;
+  --color-two: #fd4d67;
+  --color-three: #ffb840;
+  --color-for: white;
+}
+
+/*Polices*/
+.permanent-marker-regular {
+  font-family: "Permanent Marker", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*Bold*/
+@font-face {
+  font-family: open-sauce-bold;
+  src: url(fonts/open-sauce.one-bold.ttf);
+}
+
+/*Light*/
+@font-face {
+  font-family: open-sauce-light;
+  src: url(fonts/open-sauce.one-light.ttf);
+}
+
+.imglogo {
+  width: 90px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+h1 {
+  text-align: center;
+  font-family: Permanent Marker;
+  font-size: 3em;
+  color: var(--color-one);
+}
+
+h2 {
+  text-align: center;
+  font-family: open-sauce-bold;
+  font-size: 1.5em;
+  letter-spacing: -0.02em;
+  color: var(--color-two);
+}
+
+h3 {
+  text-align: center;
+  font-family: open-sauce-light;
+  font-size: 1em;
+  color: var(--color-three);
+}
+
+.presentation-cards {
+  display: flex;
+  justify-content: center; /* centre les cartes horizontalement */
+  align-items: center;
+  margin-top: 2rem;
+  position: relative; /* nécessaire pour superposition */
+}
+
+.pres-card {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px; /* bords arrondis */
+  background-color: white;
+  border: solid 1px;
+  margin-left: -50px; /* superposition horizontale */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
