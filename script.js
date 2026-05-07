@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   skillsObserver.observe(skillsSection);
 
-  // Données projets — remplace avec tes vrais projets !
+  // Données projets
   const projects = [
     {
       title: "Portfolio Dev",
@@ -99,12 +99,51 @@ document.addEventListener("DOMContentLoaded", () => {
       link: "https://github.com",
       color: "linear-gradient(135deg,#e8f5e9,#a5d6a7)",
     },
+    {
+      title: "Base de données",
+      tags: ["mySQL"],
+      desc: "Modélisation et requêtes d'une BDD relationnelle.",
+      link: "https://github.com",
+      color: "linear-gradient(135deg,#e8f5e9,#a5d6a7)",
+    },
+    {
+      title: "Base de données",
+      tags: ["mySQL"],
+      desc: "Modélisation et requêtes d'une BDD relationnelle.",
+      link: "https://github.com",
+      color: "linear-gradient(135deg,#e8f5e9,#a5d6a7)",
+    },
   ];
 
-  // Données formations — remplace avec tes vraies formations !
+  // Données formations —
   const formations = [
-    { title: "Développeur Web", school: "OpenClassrooms", year: "2024" },
-    { title: "Git & GitHub", school: "Udemy", year: "2023" },
+    {
+      title: "Bac littéraire",
+      school: "Lycée Saint-Louis Châteaulin",
+      year: "2006",
+    },
+    {
+      title: "Licence Histoire de l'art et Archéologie",
+      school: "UBO Quimper",
+      year: "2009",
+    },
+    {
+      title: "Master MEEF spécialité professorat des écoles",
+      school: "Université d'Artois",
+      year: "2012",
+    },
+    {
+      title: "Certificat de compétences Gestion de projet",
+      school: "CCI",
+      year: "2021",
+    },
+    {
+      title: "Certificat de compétences Formateur en entreprise",
+      school: "CCI",
+      year: "2022",
+    },
+    { title: "Adobe première pro Montage vidéo", school: "ENI", year: "2025" },
+    { title: "Developpeur web", school: "Ada tech school", year: "En cours" },
   ];
 
   function createCarousel(data, trackId, dotsId, prevId, nextId, type) {
