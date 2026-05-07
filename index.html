@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="fr">
   <head>
-    <meta charset="UTF8" />
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -31,7 +31,7 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="section-presentation">
         <h1>Gaédic Oger</h1>
         <h2>Développeuse en construction</h2>
         <h3>Uploading...</h3>
@@ -43,25 +43,62 @@
           <div class="pres-card"></div>
         </div>
       </section>
-      <section><h1>Compétences / Outils</h1></section>
-      <div class="skills-cloud">
-        <div class="skill"></div>
-        <div class="skill"></div>
-        <div class="skill"></div>
-        <div class="skill"></div>
-        <div class="skill"></div>
+      <section id="section-skills">
+        <h1>Compétences / Outils</h1>
+        <div class="skills-cloud">
+          <div class="skill">Git</div>
+          <div class="skill">Docker</div>
+          <div class="skill">HTML/CSS</div>
+          <div class="skill">JavaScript</div>
+          <div class="skill">Base de données</div>
+          <div class="skill">mySQL</div>
+          <div class="skill">PostgreSQL</div>
+          <div class="skill">API</div>
+        </div>
+      </section>
+      <section id="section-projects">
+        <h1>Projets / Productions</h1>
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="track-projects"></div>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" id="prev-projects">‹</button>
+          <button class="arrow-btn" id="next-projects">›</button>
+        </div>
+        <div class="carousel-dots" id="dots-projects"></div>
+      </section>
+      <section id="section-certification">
+        <h1>Formations / Certifications</h1>
+        <div class="carousel-wrapper">
+          <div class="carousel-track" id="track-formations"></div>
+        </div>
+        <div class="carousel-arrows">
+          <button class="arrow-btn" id="prev-formations">‹</button>
+          <button class="arrow-btn" id="next-formations">›</button>
+        </div>
+        <div class="carousel-dots" id="dots-formations"></div>
+      </section>
+
+      <!-- Modale -->
+      <div class="modal-overlay" id="modal">
+        <div class="modal">
+          <button class="modal-close" id="modal-close">✕</button>
+          <div class="modal-img" id="m-img"></div>
+          <div class="modal-title" id="m-title"></div>
+          <p class="modal-desc" id="m-desc"></p>
+          <a class="modal-link" id="m-link" href="#" target="_blank"
+            >Voir le projet →</a
+          >
+        </div>
       </div>
-      <section><h1>Projets / Productions</h1></section>
-      <div class="project-cards">
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-        <div class="project"></div>
-      </div>
-      <section><h1>Formations / Certifications</h1></section>
     </main>
     <footer></footer>
     <script src="script.js"></script>
+    <button
+      id="btn-top"
+      onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
+    >
+      ↑
+    </button>
   </body>
 </html>

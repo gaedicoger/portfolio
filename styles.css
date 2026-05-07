@@ -9,7 +9,7 @@
   --color-one: black;
   --color-two: #fd4d67;
   --color-three: #ffb840;
-  --color-for: white;
+  --color-four: white;
 }
 
 /*Polices*/
@@ -35,6 +35,30 @@
   width: 90px;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+#btn-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #fd4d67;
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#btn-top.visible {
+  opacity: 1;
+}
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -47,6 +71,25 @@ nav {
   justify-content: flex-end;
   align-items: center;
   gap: 2rem;
+}
+
+section {
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  padding-top: 80px;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 h1 {
@@ -65,6 +108,7 @@ h2 {
 }
 
 h3 {
+  /*background-color:yellow*/
   text-align: center;
   font-family: open-sauce-light;
   font-size: 1em;
@@ -72,6 +116,7 @@ h3 {
 }
 
 .presentation-cards {
+  /*background-color: blue;*/
   display: flex;
   justify-content: center; /* centre les cartes horizontalement */
   align-items: center;
@@ -80,6 +125,7 @@ h3 {
 }
 
 .pres-card {
+  /* Style général des cartes*/
   width: 200px;
   height: 200px;
   border-radius: 15px; /* bords arrondis */
@@ -87,7 +133,226 @@ h3 {
   border: solid 1px;
   margin-left: -50px; /* superposition horizontale */
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden; /* la photo ne déborde pas des bords arrondis */
+  cursor: pointer; /*affiche une main au passage sur la carte */
+  /* améliore l'animation avec une courbe "rebond" */
   transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+    transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    box-shadow 0.35s ease;
+}
+
+/* animtion flottante au passage de la souris*/
+.pres-card:hover {
+  transform: translateY(-14px) scale(1.04);
+  box-shadow: 0 24px 40px rgba(0, 0, 0, 0.18);
+  z-index: 10;
+  border-color: var(--color-two); /* le rose au hover */
+}
+/*décalage de base (40px) sur les cartes paires - nth-child(even) sélectionne les enfants pairs*/
+.pres-card:nth-child(even) {
+  transform: translateY(40px);
+}
+
+/* Le hover des cartes paires pour ajuster l'animation */
+.pres-card:nth-child(even):hover {
+  transform: translateY(26px) scale(1.04);
+}
+
+/* Affichage du nuage de compétences */
+.skills-cloud {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.skill {
+  font-family: open-sauce-bold;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+.skill.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Les 3 couleurs qui alternent */
+.skill:nth-child(3n + 1) {
+  background-color: var(--color-one);
+}
+.skill:nth-child(3n + 2) {
+  background-color: var(--color-two);
+}
+.skill:nth-child(3n) {
+  background-color: var(--color-three);
+}
+
+.carousel-wrapper {
+  perspective: 1000px;
+  width: 100%;
+  overflow: hidden;
+  padding: 2rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 260px;
+}
+
+.carousel-card {
+  position: absolute;
+  width: 260px;
+  min-height: 220px;
+  border-radius: 16px;
+  padding: 1.5rem;
+  background: white;
+  border: 2px solid var(--color-three);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.34, 1.1, 0.64, 1);
+  cursor: pointer;
+}
+
+.carousel-card.pos-active {
+  transform: translateX(0) scale(1) rotateY(0deg);
+  z-index: 10;
+  opacity: 1;
+  border-color: var(--color-two);
+}
+.carousel-card.pos-right {
+  transform: translateX(280px) scale(0.82) rotateY(-25deg);
+  z-index: 5;
+  opacity: 0.6;
+}
+.carousel-card.pos-left {
+  transform: translateX(-280px) scale(0.82) rotateY(25deg);
+  z-index: 5;
+  opacity: 0.6;
+}
+.carousel-card.pos-far-right {
+  transform: translateX(420px) scale(0.65) rotateY(-38deg);
+  z-index: 2;
+  opacity: 0.25;
+}
+.carousel-card.pos-far-left {
+  transform: translateX(-420px) scale(0.65) rotateY(38deg);
+  z-index: 2;
+  opacity: 0.25;
+}
+.carousel-card.pos-hidden {
+  transform: translateX(0) scale(0.5);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.carousel-arrows {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.arrow-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--color-two);
+  background: white;
+  color: var(--color-two);
+  font-size: 1.4rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.arrow-btn:hover {
+  background: var(--color-two);
+  color: white;
+}
+
+/* Modale */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 1000;
+}
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: all;
+}
+.modal {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  width: 90%;
+  max-width: 420px;
+  transform: translateY(30px);
+  transition: transform 0.4s ease;
+  position: relative;
+}
+.modal-overlay.open .modal {
+  transform: translateY(0);
+}
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: #aaa;
+}
+.modal-img {
+  width: 100%;
+  height: 160px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+.modal-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #222;
+  margin-bottom: 0.5rem;
+}
+.modal-desc {
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+.modal-link {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  background: var(--color-two);
+  color: white;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 0.85rem;
 }
