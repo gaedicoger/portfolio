@@ -3,7 +3,7 @@
     {
       "title": "Portfolio Dev",
       "icon": "fa-solid fa-laptop-code",
-      "img": "images/projets/default.png",
+      "img": "images/projets/default.jpg",
       "tags": ["HTML/CSS", "JS"],
       "desc": "Mon portfolio multi-profil avec animations et scroll snap.",
       "link": "https://github.com",
@@ -48,7 +48,7 @@
     {
       "title": "CraftGest",
       "icon": "fa-solid fa-boxes-stacked",
-      "img": "images/projets/default.png",
+      "img": "images/projets/default.jpg",
       "tags": ["React", "Java", "Springboot", "PostgreSQL"],
       "desc": "En cours — Application de gestion des stocks pour une artisane.",
       "link": "https://github.com",

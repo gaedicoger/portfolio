@@ -362,6 +362,33 @@ h3 {
   border-radius: 12px;
   margin-bottom: 1.5rem;
   object-fit: cover;
+  cursor: zoom-in;  /* indique que c'est cliquable */
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  cursor: zoom-out;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 90vh;
+  border-radius: 8px;
+  object-fit: contain;
 }
 .modal-title {
   font-family: open-sauce-bold;
