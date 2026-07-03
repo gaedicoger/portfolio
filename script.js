@@ -27,15 +27,8 @@ document.addEventListener("DOMContentLoaded", () => {
       "next-projects",
       "project",
     );
-    // Crée le carrousel des formations
-    setupCarousel(
-      data.formations,
-      "track-formations",
-      "dots-formations",
-      "prev-formations",
-      "next-formations",
-      "formation",
-    );
+    // Crée la timeline des formations
+    setupTimeline(data.formations);
     setupModal(); // Gère la modale de détail
   }
 
@@ -248,6 +241,55 @@ document.addEventListener("DOMContentLoaded", () => {
       .addEventListener("click", () => goTo(current - 1));
 
     updatePositions(); // On initialise les positions au chargement
+  }
+
+  // =====================
+  // TIMELINE
+  // =====================
+  function setupTimeline(formations) {
+    const track = document.getElementById("timeline-track");
+    let current = 0;
+    // const n = formations.length;
+
+    const reversed = [...formations].reverse(); // copie inversée sans modifier l'original
+    const n = reversed.length;
+
+    // On crée une carte pour chaque formation :
+    reversed.forEach((f, i) => {
+      const card = document.createElement("div");
+      card.className = "tcard" + (i === 0 ? " active" : "");
+      card.dataset.index = i;
+      card.innerHTML = `
+      <div class="tcard-year">${f.year}</div>
+      <div class="tcard-title">${f.title}</div>
+      <div class="tcard-school">${f.school}</div>
+    `;
+      card.addEventListener("click", () => goTo(parseInt(card.dataset.index)));
+      track.appendChild(card);
+    });
+
+    function updateTrack() {
+      track.querySelectorAll(".tcard").forEach((c, i) => {
+        c.classList.toggle("active", i === current);
+      });
+      // Décale la piste pour centrer la carte active
+      const offset = Math.max(0, current - 1) * (180 + 24);
+      track.style.transform = `translateX(-${offset}px)`;
+    }
+
+    function goTo(index) {
+      current = Math.max(0, Math.min(index, n - 1));
+      updateTrack();
+    }
+
+    document
+      .getElementById("tnext")
+      .addEventListener("click", () => goTo(current + 1));
+    document
+      .getElementById("tprev")
+      .addEventListener("click", () => goTo(current - 1));
+
+    updateTrack();
   }
 
   // =====================
