@@ -216,11 +216,14 @@ h3 {
 }
 
 .carousel-card {
+  display: flex;
+  flex-direction: column; /* nécessaire pour que margin-top: auto fonctionne */
   position: absolute;
   width: 260px;
   min-height: 220px;
   border-radius: 16px;
   padding: 1.5rem;
+  font-family: open-sauce-light;
   background: white;
   border: 2px solid var(--color-three);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -266,6 +269,12 @@ h3 {
   justify-content: center;
   gap: 1.5rem;
   margin-top: 1rem;
+}
+
+.card-hint {
+  font-size: 0.72rem;
+  color: #aaa;
+  margin-top: auto; /* pousse le texte vers le bas */
 }
 
 .card-title {
