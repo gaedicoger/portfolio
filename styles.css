@@ -353,7 +353,6 @@ h3 {
   font-size: 1.4rem;
   cursor: pointer;
   color: #aaa;
-  
 }
 .modal-img {
   margin-top: 1rem;
@@ -362,13 +361,13 @@ h3 {
   border-radius: 12px;
   margin-bottom: 1.5rem;
   object-fit: cover;
-  cursor: zoom-in;  /* indique que c'est cliquable */
+  cursor: zoom-in; /* indique que c'est cliquable */
 }
 
 .lightbox {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -391,11 +390,11 @@ h3 {
   object-fit: contain;
 }
 .modal-title {
+  margin-bottom: 0.5rem;
   font-family: open-sauce-bold;
   font-size: 1.4rem;
   font-weight: bold;
-  color: var(--color-one)
-  margin-bottom: 0.5rem;
+  color: var(--color-one);
 }
 .modal-desc {
   font-family: open-sauce-light;
