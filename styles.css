@@ -218,6 +218,7 @@ h3 {
 .carousel-card {
   display: flex;
   flex-direction: column; /* nécessaire pour que margin-top: auto fonctionne */
+  overflow: hidden; /* cache ce qui dépasse */
   position: absolute;
   width: 260px;
   min-height: 220px;
@@ -272,6 +273,10 @@ h3 {
 }
 
 .card-hint {
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* max 2 lignes */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
   font-size: 0.72rem;
   color: #aaa;
   margin-top: auto; /* pousse le texte vers le bas */
