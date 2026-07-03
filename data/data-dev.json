@@ -1,0 +1,102 @@
+{
+  "projects": [
+    {
+      "title": "Portfolio Dev",
+      "icon": "fa-solid fa-laptop-code",
+      "tags": ["HTML/CSS", "JS"],
+      "desc": "Mon portfolio multi-profil avec animations et scroll snap.",
+      "link": "https://github.com",
+      "color": "linear-gradient(135deg,#fde8ec,#ffc0cb)"
+    },
+    {
+      "title": "Adaquiz",
+      "icon": "fa-solid fa-circle-question",
+      "tags": ["HTML/CSS", "JS"],
+      "desc": "Quiz en ligne sur les femmes dans la tech, réalisé en équipe, debugs, algorithmie.",
+      "link": "https://gaedicoger.github.io/Adaquiz/",
+      "color": "linear-gradient(135deg,#f3e5f5,#ce93d8)"
+    },
+    {
+      "title": "Open Météo",
+      "icon": "fa-solid fa-cloud-sun",
+      "tags": ["JS", "API"],
+      "desc": "App météo temps réel utilisant l'API Open Météo.",
+      "link": "https://gaedicoger.github.io/Open_Meteo/",
+      "color": "linear-gradient(135deg,#e3f2fd,#90caf9)"
+    },
+    {
+      "title": "Adataviz",
+      "icon": "fa-solid fa-tree",
+      "tags": ["JS", "API", "React"],
+      "desc": "Application de consultation du patrimoine arboré de Nantes Métropole avec carte interactive.",
+      "link": "https://gaedicoger.github.io/adataviz/",
+      "color": "linear-gradient(135deg,#e8f5e9,#a5d6a7)"
+    },
+    {
+      "title": "Adashboard",
+      "icon": "fa-solid fa-chart-line",
+      "tags": ["SQL", "PostgreSQL", "React", "Express.js"],
+      "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
+      "link": "https://github.com",
+      "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
+    },
+    {
+      "title": "CraftGest",
+      "icon": "fa-solid fa-boxes-stacked",
+      "tags": ["React", "Java", "Springboot", "PostgreSQL"],
+      "desc": "En cours — Application de gestion des stocks pour une artisane.",
+      "link": "https://github.com",
+      "color": "linear-gradient(135deg,#fde8ec,#ffc0cb)"
+    }
+  ],
+  "formations": [
+    {
+      "title": "Bac littéraire",
+      "school": "Lycée Saint-Louis — Châteaulin, Finistère",
+      "year": "2006"
+    },
+    {
+      "title": "Licence Histoire de l'art et Archéologie",
+      "school": "UBO Quimper — Finistère",
+      "year": "2009"
+    },
+    {
+      "title": "Master MEEF — Professorat des écoles",
+      "school": "Université d'Artois — Pas de Calais",
+      "year": "2012"
+    },
+    {
+      "title": "Certificat Gestion de projet",
+      "school": "CCI Nantes — Loire Atlantique",
+      "year": "2021"
+    },
+    {
+      "title": "Certificat Formateur en entreprise",
+      "school": "CCI Nantes — Loire Atlantique",
+      "year": "2022"
+    },
+    {
+      "title": "Adobe Premiere Pro — Montage vidéo",
+      "school": "ENI Nantes",
+      "year": "2025"
+    },
+    {
+      "title": "Développeuse Web",
+      "school": "Ada Tech School",
+      "year": "En cours"
+    }
+  ],
+  "skills": [
+    "Git",
+    "Docker",
+    "HTML / CSS",
+    "JavaScript",
+    "Bases de données",
+    "mySQL",
+    "PostgreSQL",
+    "API",
+    "React",
+    "Express.js",
+    "Java / Springboot"
+  ]
+}
