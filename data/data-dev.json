@@ -3,6 +3,7 @@
     {
       "title": "Portfolio Dev",
       "icon": "fa-solid fa-laptop-code",
+      "img": "images/projets/default.png",
       "tags": ["HTML/CSS", "JS"],
       "desc": "Mon portfolio multi-profil avec animations et scroll snap.",
       "link": "https://github.com",
@@ -11,6 +12,7 @@
     {
       "title": "Adaquiz",
       "icon": "fa-solid fa-circle-question",
+      "img": "images/projets/Adaquiz.png",
       "tags": ["HTML/CSS", "JS"],
       "desc": "Quiz en ligne sur les femmes dans la tech, réalisé en équipe, debugs, algorithmie.",
       "link": "https://gaedicoger.github.io/Adaquiz/",
@@ -19,6 +21,7 @@
     {
       "title": "Open Météo",
       "icon": "fa-solid fa-cloud-sun",
+      "img": "images/projets/Open_Meteo.png",
       "tags": ["JS", "API"],
       "desc": "App météo temps réel utilisant l'API Open Météo.",
       "link": "https://gaedicoger.github.io/Open_Meteo/",
@@ -27,6 +30,7 @@
     {
       "title": "Adataviz",
       "icon": "fa-solid fa-tree",
+      "img": "images/projets/Adataviz.png",
       "tags": ["JS", "API", "React"],
       "desc": "Application de consultation du patrimoine arboré de Nantes Métropole avec carte interactive.",
       "link": "https://gaedicoger.github.io/adataviz/",
@@ -35,14 +39,16 @@
     {
       "title": "Adashboard",
       "icon": "fa-solid fa-chart-line",
+      "img": "images/projets/Adashboard.png",
       "tags": ["SQL", "PostgreSQL", "React", "Express.js"],
       "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
-      "link": "https://github.com",
+      "link": "https://github.com/gaedicoger/adashboard",
       "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
     },
     {
       "title": "CraftGest",
       "icon": "fa-solid fa-boxes-stacked",
+      "img": "images/projets/default.png",
       "tags": ["React", "Java", "Springboot", "PostgreSQL"],
       "desc": "En cours — Application de gestion des stocks pour une artisane.",
       "link": "https://github.com",
@@ -97,6 +103,7 @@
     "API",
     "React",
     "Express.js",
-    "Java / Springboot"
+    "Java / Springboot",
+    "Claude"
   ]
 }
