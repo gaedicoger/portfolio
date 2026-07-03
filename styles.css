@@ -75,6 +75,8 @@ nav {
 }
 
 section {
+  background: rgba(255, 255, 255, 0.5);
+  /* La dernière valeur du bakcground agit sur l'opacité*/
   min-height: 100vh;
   padding: 4rem 2rem;
   padding-top: 80px;
