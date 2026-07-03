@@ -67,8 +67,12 @@ document.addEventListener("DOMContentLoaded", () => {
   // =====================
   function setupScrollButton() {
     const btnTop = document.getElementById("btn-top");
-    window.addEventListener("wheel", () => {
-      btnTop.classList.toggle("visible", window.scrollY > 0);
+    window.addEventListener("wheel", (e) => {
+      if (e.deltaY > 0) {
+        btnTop.classList.add("visible");
+      } else if (window.scrollY === 0) {
+        btnTop.classList.remove("visible");
+      }
     });
   }
 

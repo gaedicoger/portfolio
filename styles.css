@@ -40,6 +40,7 @@ html {
 }
 
 #btn-top {
+  z-index: 9999;
   position: fixed;
   bottom: 2rem;
   right: 2rem;
@@ -567,8 +568,55 @@ h3 {
 /* S'assurer que tout le contenu passe au dessus */
 header,
 main,
-footer,
-#btn-top {
+footer {
   position: relative;
   z-index: 1;
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 10rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+}
+
+.scroll-text {
+  font-family: open-sauce-light;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  color: var(--color-two);
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.arrow {
+  width: 16px;
+  height: 16px;
+  border-right: 2px solid var(--color-two);
+  border-bottom: 2px solid var(--color-two);
+  transform: rotate(45deg);
+  animation: bounce 1.2s ease-in-out infinite;
+}
+.arrow:nth-child(3) {
+  animation-delay: 0.15s;
+  opacity: 0.6;
+}
+.arrow:nth-child(4) {
+  animation-delay: 0.3s;
+  opacity: 0.3;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: rotate(45deg) translate(0, 0);
+  }
+  50% {
+    transform: rotate(45deg) translate(3px, 3px);
+  }
 }
