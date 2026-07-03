@@ -528,3 +528,47 @@ h3 {
   background: var(--color-two);
   color: white;
 }
+
+.pres-card:nth-child(1) {
+  background-image: url("images/entry/ada.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pres-card:nth-child(2) {
+  background-image: url("images/entry/gravure.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pres-card:nth-child(3) {
+  background-image: url("images/entry/chat.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pres-card:nth-child(4) {
+  background-image: url("images/entry/neige.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.pres-card:nth-child(5) {
+  background-image: url("images/entry/nantes.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+#bg-circuit {
+  position: fixed; /* fixe → reste en fond même en scrollant */
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* le SVG ne capte pas les clics */
+}
+
+/* S'assurer que tout le contenu passe au dessus */
+header,
+main,
+footer,
+#btn-top {
+  position: relative;
+  z-index: 1;
+}
