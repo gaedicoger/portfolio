@@ -1,0 +1,67 @@
+/* =====================
+   SECTIONS
+   min-height 100vh → chaque section prend toute la hauteur de l'écran
+   background semi-transparent → laisse apparaître le circuit en fond
+===================== */
+section {
+  background: rgba(255, 255, 255, 0.5);
+  min-height: 100vh;
+  padding: 4rem 2rem;
+  padding-top: 80px; /* compense la hauteur du header */
+}
+
+/* =====================
+   SECTIONS CENTRÉES VERTICALEMENT
+   Toutes sauf la présentation qui gère son propre layout
+===================== */
+#section-skills,
+#section-projects,
+#section-certification {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* =====================
+   ANIMATIONS D'ENTRÉE AU SCROLL
+   section-hidden → état de départ (invisible et décalée)
+   section-visible → état final (visible) ajouté par le JS
+===================== */
+.section-hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s ease;
+}
+
+.section-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   BACKGROUND CIRCUIT
+   position fixed → reste en fond même en scrollant
+   pointer-events none → ne capte pas les clics
+   z-index 0 → sous tout le contenu
+===================== */
+#bg-circuit {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* =====================
+   CONTENU AU DESSUS DU CIRCUIT
+   main et footer passent au dessus du background
+   header a son propre z-index 100 dans nav.css
+===================== */
+main,
+footer {
+  position: relative;
+  z-index: 1;
+}

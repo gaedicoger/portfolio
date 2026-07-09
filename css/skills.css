@@ -1,0 +1,57 @@
+/* =====================
+   CONTENEUR DU NUAGE
+   max-width → limite la largeur pour forcer le retour à la ligne
+   margin auto → centré horizontalement
+   flex-wrap → les tags passent à la ligne automatiquement
+===================== */
+.skills-cloud {
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+/* =====================
+   TAGS DE COMPÉTENCES
+   opacity 0 → invisibles par défaut
+   translateY → décalés vers le bas au départ
+   La classe .show est ajoutée par le JS pour déclencher l'animation
+===================== */
+.skill {
+  font-family: open-sauce-bold;
+  padding: 0.6rem 1.4rem;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.4s ease,
+    transform 0.4s ease;
+}
+
+/* État final — ajouté par le JS avec un délai progressif */
+.skill.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =====================
+   COULEURS ALTERNÉES
+   3n+1 → tags 1, 4, 7... → noir
+   3n+2 → tags 2, 5, 8... → rose
+   3n  → tags 3, 6, 9... → orange
+===================== */
+.skill:nth-child(3n + 1) {
+  background-color: var(--color-one);
+}
+.skill:nth-child(3n + 2) {
+  background-color: var(--color-two);
+}
+.skill:nth-child(3n) {
+  background-color: var(--color-three);
+}

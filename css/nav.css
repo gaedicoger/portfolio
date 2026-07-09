@@ -1,0 +1,133 @@
+/* =====================
+   LOGO
+===================== */
+.imglogo {
+  width: 90px;
+}
+
+/* =====================
+   HEADER
+   z-index 100 pour passer au dessus des sections
+   overflow visible pour que les tooltips ne soient pas coupés
+===================== */
+header {
+  position: relative;
+  z-index: 100;
+  overflow: visible;
+}
+
+/* =====================
+   NAV
+   flex pour aligner logo et icônes
+===================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  overflow: visible; /* nécessaire pour les tooltips */
+}
+
+.nav-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* =====================
+   ITEMS NAV
+   position relative nécessaire pour positionner
+   les tooltips (::after) par rapport à l'icône
+===================== */
+.itemnav {
+  position: relative;
+  cursor: pointer;
+}
+
+/* =====================
+   TOOLTIP — PROFIL ACTIF
+   Apparaît en rose au survol de l'icône active
+===================== */
+.itemnav.active-profile::after {
+  content: "Développeuse Fullstack";
+  position: absolute;
+  bottom: -2rem; /* positionné sous l'icône */
+  left: 50%;
+  transform: translateX(-50%); /* centré horizontalement */
+  background: var(--color-two);
+  color: white;
+  font-size: 0.7rem;
+  font-family: open-sauce-light;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap; /* empêche le texte de passer à la ligne */
+  opacity: 0; /* invisible par défaut */
+  pointer-events: none; /* ne capte pas les clics */
+  transition: opacity 0.2s;
+  z-index: 9999;
+}
+
+/* Apparition du tooltip au survol */
+.itemnav.active-profile:hover::after {
+  opacity: 1;
+}
+
+/* =====================
+   TOOLTIP — PROFILS À VENIR
+   Icônes grisées avec tooltip "Bientôt !"
+===================== */
+.itemnav.coming-soon {
+  opacity: 0.5; /* grisé pour indiquer non disponible */
+  cursor: not-allowed; /* curseur interdit */
+}
+
+.itemnav.coming-soon::after {
+  content: "Bientôt !";
+  position: absolute;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-one);
+  color: white;
+  font-size: 0.7rem;
+  font-family: open-sauce-light;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 9999;
+}
+
+.itemnav.coming-soon:hover::after {
+  opacity: 1;
+}
+
+/* =====================
+   BOUTON RETOUR EN HAUT
+   position fixed → toujours visible en bas à droite
+   opacity 0 par défaut → apparaît via JS quand on scrolle
+===================== */
+#btn-top {
+  z-index: 9999;
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: var(--color-two);
+  color: white;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Classe ajoutée par le JS quand on scrolle */
+#btn-top.visible {
+  opacity: 1;
+}

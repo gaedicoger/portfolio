@@ -3,7 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="css/sections.css" />
+    <link rel="stylesheet" href="css/presentation.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/projets.css" />
+    <link rel="stylesheet" href="css/formations.css" />
+    <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/png" href="images/icone_clavier.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -146,14 +154,17 @@
           <img class="imglogo" src="/images/icone_clavier.png" alt="" />
         </div>
         <div class="nav-right">
-          <div class="itemnav">
-            <img class="imglogo" src="/images/icone_site.png" alt="" />
+          <div class="itemnav active-profile">
+            <!-- profil dev → actif, pas de classe -->
+            <img class="imglogo" src="images/icone_site.png" alt="dev" />
           </div>
-          <div class="itemnav">
-            <img class="imglogo" src="/images/icone_brain.png" alt="" />
+          <div class="itemnav coming-soon">
+            <!-- artiste → bientôt -->
+            <img class="imglogo" src="images/icone_brain.png" alt="artiste" />
           </div>
-          <div class="itemnav">
-            <img class="imglogo" src="/images/icone_photo.png" alt="" />
+          <div class="itemnav coming-soon">
+            <!-- péda → bientôt -->
+            <img class="imglogo" src="images/icone_photo.png" alt="pédagogie" />
           </div>
         </div>
       </nav>
@@ -161,7 +172,7 @@
     <main>
       <section id="section-presentation">
         <h1>Gaédic Oger</h1>
-        <h2>Développeuse en construction</h2>
+        <h2>Développeuse Fullstack en construction</h2>
         <h3>Uploading...</h3>
         <div class="presentation-cards">
           <div class="pres-card"></div>
@@ -217,7 +228,29 @@
         </div>
       </div>
     </main>
-    <footer></footer>
+    <footer>
+      <div class="footer-links">
+        <a
+          href="https://www.linkedin.com/in/gaedic-oger/"
+          class="footer-link"
+          target="_blank"
+        >
+          <i class="fa-brands fa-linkedin"></i>
+          LinkedIn
+        </a>
+        <a
+          href="https://github.com/gaedicoger"
+          class="footer-link"
+          target="_blank"
+        >
+          <i class="fa-brands fa-github"></i>
+          GitHub
+        </a>
+      </div>
+      <p class="footer-copy">
+        © 2026 <span>Gaédic Oger</span> — Développeuse Fullstack
+      </p>
+    </footer>
     <script src="script.js"></script>
     <!-- Bouton retour en haut -->
     <button

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // INITIALISATION
   // =====================
   function init(data) {
+    let currentIndex = 0; //Partagé entre deux fonctions
     setupScroll();
     setupScrollButton();
     setupSkills(data.skills);
@@ -23,57 +24,57 @@ document.addEventListener("DOMContentLoaded", () => {
     );
     setupTimeline(data.formations);
     setupModal();
-  }
 
-  // =====================
-  // SCROLL PAR SECTION
-  // =====================
-  function setupScroll() {
-    const sections = document.querySelectorAll("section");
-    let currentIndex = 0;
-    let isScrolling = false;
+    // =====================
+    // SCROLL PAR SECTION
+    // =====================
+    function setupScroll() {
+      const sections = document.querySelectorAll("section");
+      let currentIndex = 0;
+      let isScrolling = false;
 
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting)
-            entry.target.classList.add("section-visible");
-        });
-      },
-      { threshold: 0.1 },
-    );
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting)
+              entry.target.classList.add("section-visible");
+          });
+        },
+        { threshold: 0.1 },
+      );
 
-    sections.forEach((section) => {
-      section.classList.add("section-hidden");
-      observer.observe(section);
-    });
+      sections.forEach((section) => {
+        section.classList.add("section-hidden");
+        observer.observe(section);
+      });
 
-    window.addEventListener("wheel", (e) => {
-      if (isScrolling) return;
-      if (e.deltaY > 0 && currentIndex < sections.length - 1) currentIndex++;
-      else if (e.deltaY < 0 && currentIndex > 0) currentIndex--;
-      sections[currentIndex].scrollIntoView({ behavior: "smooth" });
-      isScrolling = true;
-      setTimeout(() => {
-        isScrolling = false;
-      }, 800);
-    });
+      window.addEventListener("wheel", (e) => {
+        if (isScrolling) return;
+        if (e.deltaY > 0 && currentIndex < sections.length - 1) currentIndex++;
+        else if (e.deltaY < 0 && currentIndex > 0) currentIndex--;
+        sections[currentIndex].scrollIntoView({ behavior: "smooth" });
+        isScrolling = true;
+        setTimeout(() => {
+          isScrolling = false;
+        }, 800);
+      });
 
-    window.onbeforeunload = () => window.scrollTo(0, 0);
-  }
+      window.onbeforeunload = () => window.scrollTo(0, 0);
+    }
 
-  // =====================
-  // BOUTON RETOUR EN HAUT
-  // =====================
-  function setupScrollButton() {
-    const btnTop = document.getElementById("btn-top");
-    window.addEventListener("wheel", (e) => {
-      if (e.deltaY > 0) {
-        btnTop.classList.add("visible");
-      } else if (window.scrollY === 0) {
-        btnTop.classList.remove("visible");
-      }
-    });
+    // =====================
+    // BOUTON RETOUR EN HAUT
+    // =====================
+    function setupScrollButton() {
+      const btnTop = document.getElementById("btn-top");
+      window.addEventListener("wheel", (e) => {
+        if (e.deltaY > 0) {
+          btnTop.classList.add("visible");
+        } else if (e.deltaY < 0 && currentIndex === 0) {
+          btnTop.classList.remove("visible");
+        }
+      });
+    }
   }
 
   // =====================
