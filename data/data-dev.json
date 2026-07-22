@@ -42,7 +42,7 @@
       "img": "images/projets/Adashboard.png",
       "tags": ["SQL", "PostgreSQL", "React", "Express.js"],
       "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
-      "link": "https://github.com/gaedicoger/adashboard",
+      "link": "https://adashboard-delta.vercel.app",
       "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
     },
     {
