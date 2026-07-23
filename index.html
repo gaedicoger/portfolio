@@ -24,130 +24,7 @@
     />
   </head>
   <body>
-    <svg
-      id="bg-circuit"
-      viewBox="0 0 800 400"
-      preserveAspectRatio="xMidYMid slice"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <!-- Lignes verticales roses -->
-      <polyline
-        points="320,0 320,120 360,160 360,240 320,280 320,400"
-        stroke="#fd4d67"
-        stroke-width="1.5"
-        fill="none"
-        opacity="0.25"
-      />
-      <polyline
-        points="340,0 340,80 380,120 380,200 340,240 340,400"
-        stroke="#fd4d67"
-        stroke-width="1"
-        fill="none"
-        opacity="0.15"
-      />
-      <polyline
-        points="300,0 300,160 260,200 260,280 300,320 300,400"
-        stroke="#fd4d67"
-        stroke-width="1"
-        fill="none"
-        opacity="0.12"
-      />
-
-      <!-- Lignes verticales oranges -->
-      <polyline
-        points="460,0 460,100 420,140 420,220 460,260 460,400"
-        stroke="#ffb840"
-        stroke-width="1.5"
-        fill="none"
-        opacity="0.25"
-      />
-      <polyline
-        points="440,0 440,60 480,100 480,180 440,220 440,400"
-        stroke="#ffb840"
-        stroke-width="1"
-        fill="none"
-        opacity="0.15"
-      />
-      <polyline
-        points="480,0 480,140 520,180 520,260 480,300 480,400"
-        stroke="#ffb840"
-        stroke-width="1"
-        fill="none"
-        opacity="0.12"
-      />
-
-      <!-- Points de connexion roses -->
-      <circle cx="320" cy="120" r="3" fill="#fd4d67" opacity="0.3" />
-      <circle cx="360" cy="160" r="3" fill="#fd4d67" opacity="0.3" />
-      <circle cx="360" cy="240" r="3" fill="#fd4d67" opacity="0.3" />
-      <circle cx="320" cy="280" r="3" fill="#fd4d67" opacity="0.3" />
-
-      <!-- Points de connexion oranges -->
-      <circle cx="460" cy="100" r="3" fill="#ffb840" opacity="0.3" />
-      <circle cx="420" cy="140" r="3" fill="#ffb840" opacity="0.3" />
-      <circle cx="420" cy="220" r="3" fill="#ffb840" opacity="0.3" />
-      <circle cx="460" cy="260" r="3" fill="#ffb840" opacity="0.3" />
-
-      <!-- Connexions horizontales pointillées -->
-      <line
-        x1="320"
-        y1="160"
-        x2="460"
-        y2="160"
-        stroke="#fd4d67"
-        stroke-width="0.8"
-        opacity="0.1"
-        stroke-dasharray="4,4"
-      />
-      <line
-        x1="360"
-        y1="240"
-        x2="420"
-        y2="240"
-        stroke="#ffb840"
-        stroke-width="0.8"
-        opacity="0.1"
-        stroke-dasharray="4,4"
-      />
-
-      <!-- Blocs rectangulaires style pixel -->
-      <rect
-        x="290"
-        y="180"
-        width="40"
-        height="8"
-        rx="1"
-        fill="#fd4d67"
-        opacity="0.08"
-      />
-      <rect
-        x="470"
-        y="200"
-        width="40"
-        height="8"
-        rx="1"
-        fill="#ffb840"
-        opacity="0.08"
-      />
-      <rect
-        x="310"
-        y="320"
-        width="30"
-        height="6"
-        rx="1"
-        fill="#fd4d67"
-        opacity="0.06"
-      />
-      <rect
-        x="450"
-        y="300"
-        width="30"
-        height="6"
-        rx="1"
-        fill="#ffb840"
-        opacity="0.06"
-      />
-    </svg>
+    <img id="bg-circuit" src="svg/background.svg" alt="" />
     <header>
       <nav>
         <div class="logo">
@@ -202,6 +79,10 @@
           <button class="arrow-btn" id="next-projects">›</button>
         </div>
         <div class="carousel-dots" id="dots-projects"></div>
+      </section>
+      <section id="section-parcours">
+        <h1>Mon Parcours</h1>
+        <div class="serpentin" id="serpentin-track"></div>
       </section>
       <section id="section-certification">
         <h1>Formations / Certifications</h1>
