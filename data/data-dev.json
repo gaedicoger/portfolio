@@ -115,7 +115,6 @@
       "poste": "Animatrice séjour vacances et loisirs",
       "structure": "Polysonnance Châteaulin",
       "type": "pro",
-      "parallel": false,
       "visible": true
     },
     {
@@ -123,7 +122,6 @@
       "poste": "Employée polyvalente",
       "structure": "SMEBA",
       "type": "pro",
-      "parallel": true,
       "visible": true
     },
     {
@@ -131,39 +129,13 @@
       "poste": "Animatrice séjour adapté",
       "structure": "EPAL Association",
       "type": "pro",
-      "parallel": true,
-      "visible": true
-    },
-    {
-      "periode": "2006",
-      "poste": "Bac littéraire",
-      "structure": "Lycée Saint-Louis — Châteaulin",
-      "type": "formation",
-      "parallel": false,
-      "visible": false
-    },
-    {
-      "periode": "2009",
-      "poste": "Licence Histoire de l'art et Archéologie",
-      "structure": "UBO Quimper",
-      "type": "formation",
-      "parallel": false,
-      "visible": true
-    },
-    {
-      "periode": "2012",
-      "poste": "Master MEEF — Professorat des écoles",
-      "structure": "Université d'Artois",
-      "type": "formation",
-      "parallel": false,
       "visible": true
     },
     {
       "periode": "2013 - 2017",
-      "poste": "AESH",
+      "poste": "Accompagnatrice d'élèves en situation de handicap",
       "structure": "Éducation Nationale",
       "type": "pro",
-      "parallel": true,
       "visible": true
     },
     {
@@ -171,7 +143,6 @@
       "poste": "Assistante d'éducation",
       "structure": "Collège Angers",
       "type": "pro",
-      "parallel": true,
       "visible": true
     },
     {
@@ -179,7 +150,6 @@
       "poste": "Hôtesse d'accueil",
       "structure": "CNAM",
       "type": "pro",
-      "parallel": false,
       "visible": true
     },
     {
@@ -187,15 +157,6 @@
       "poste": "Assistante de formation",
       "structure": "CNAM",
       "type": "pro",
-      "parallel": false,
-      "visible": true
-    },
-    {
-      "periode": "2021",
-      "poste": "Certificat de compétences - Gestion de projet",
-      "structure": "CCI Nantes",
-      "type": "formation",
-      "parallel": false,
       "visible": true
     },
     {
@@ -203,15 +164,6 @@
       "poste": "Chargée de projet",
       "structure": "CNAM",
       "type": "pro",
-      "parallel": false,
-      "visible": true
-    },
-    {
-      "periode": "2022",
-      "poste": "Certificat de compétences - Formateur en entreprise",
-      "structure": "CCI Nantes",
-      "type": "formation",
-      "parallel": false,
       "visible": true
     },
     {
@@ -219,23 +171,13 @@
       "poste": "Ingénieure pédagogique",
       "structure": "CNAM",
       "type": "pro-cle",
-      "parallel": false,
-      "visible": true
-    },
-    {
-      "periode": "2025",
-      "poste": "Adobe Premiere Pro — Montage vidéo",
-      "structure": "ENI Nantes",
-      "type": "formation",
-      "parallel": false,
       "visible": true
     },
     {
       "periode": "2026 →",
-      "poste": "Développeuse Fullstack",
-      "structure": "Ada Tech School",
+      "poste": "Reconvertion : Développeuse Fullstack",
+      "structure": "apprenante chez Ada Tech School",
       "type": "encours",
-      "parallel": false,
       "visible": true
     }
   ]
