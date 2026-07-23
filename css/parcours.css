@@ -1,0 +1,240 @@
+/* =====================
+   SECTION PARCOURS
+   La frise serpentin occupe toute la section
+===================== */
+#section-parcours {
+  overflow: hidden;
+}
+
+/* =====================
+   CONTENEUR SERPENTIN
+   position relative → nécessaire pour positionner
+   la ligne centrale et les cartes
+===================== */
+.serpentin {
+  position: relative;
+  padding: 2rem 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =====================
+   LIGNE CENTRALE
+   Dégradé rose → orange de haut en bas
+   C'est le "fil" du parcours
+===================== */
+.serpentin-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--color-two), var(--color-three));
+  transform: translateX(-50%);
+}
+
+/* =====================
+   ITEMS DE LA FRISE
+   Alternent gauche/droite → effet serpentin
+   opacity 0 + translateX → état de départ pour l'animation
+===================== */
+.exp-item {
+  display: flex;
+  justify-content: flex-end;
+  padding-right: calc(50% + 2rem);
+  margin-bottom: 2rem;
+  position: relative;
+  opacity: 0;
+  transform: translateX(-30px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+/* Items à droite */
+.exp-item.right {
+  justify-content: flex-start;
+  padding-right: 0;
+  padding-left: calc(50% + 2rem);
+  transform: translateX(30px);
+}
+
+/* Etat visible — ajouté par le JS */
+.exp-item.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* =====================
+   POINT SUR LA LIGNE
+   ::after → le point de connexion entre la carte et la ligne
+===================== */
+.exp-item::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-two);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--color-two);
+  z-index: 1;
+  transition: background 0.3s;
+}
+
+/* =====================
+   CARTES
+===================== */
+.exp-card {
+  background: white;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  max-width: 220px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  cursor: default;
+  border: 2px solid var(--color-two);
+}
+
+.exp-item.right .exp-card {
+  border-color: var(--color-three);
+}
+
+.exp-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 25px rgba(253, 77, 103, 0.15);
+}
+
+/* =====================
+   TYPES DE CARTES
+   pro → orange
+   formation → rose
+   pro-cle → noir (expérience clé)
+   encours → pulsé
+===================== */
+.exp-item.type-pro .exp-card {
+  border-color: var(--color-three);
+}
+.exp-item.type-pro::after {
+  background: var(--color-three);
+  box-shadow: 0 0 0 2px var(--color-three);
+}
+
+.exp-item.type-formation .exp-card {
+  border-color: var(--color-two);
+}
+.exp-item.type-formation::after {
+  background: var(--color-two);
+  box-shadow: 0 0 0 2px var(--color-two);
+}
+
+.exp-item.type-pro-cle .exp-card {
+  border-color: var(--color-one);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.exp-item.type-pro-cle::after {
+  background: var(--color-one);
+  box-shadow: 0 0 0 2px var(--color-one);
+}
+
+/* Animation pulsée pour "en cours" */
+.exp-item.type-encours .exp-card {
+  border-color: var(--color-two);
+}
+.exp-item.type-encours::after {
+  background: var(--color-two);
+  box-shadow: 0 0 0 2px var(--color-two);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 2px var(--color-two);
+  }
+  50% {
+    box-shadow: 0 0 0 6px rgba(253, 77, 103, 0.3);
+  }
+}
+
+/* =====================
+   CONTENU DES CARTES
+===================== */
+.exp-periode {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--color-three);
+  margin-bottom: 0.3rem;
+  font-family: open-sauce-bold;
+}
+
+.exp-item.type-formation .exp-periode {
+  color: var(--color-two);
+}
+.exp-item.type-pro-cle .exp-periode {
+  color: var(--color-one);
+}
+.exp-item.type-encours .exp-periode {
+  color: var(--color-two);
+}
+
+.exp-poste {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--color-one);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+  font-family: open-sauce-bold;
+}
+
+.exp-structure {
+  font-size: 0.78rem;
+  color: #aaa;
+  font-family: open-sauce-light;
+}
+
+/* =====================
+   ITEMS PARALLÈLES
+   Deux cartes côte à côte sur la même ligne
+===================== */
+.exp-parallel-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.exp-parallel-group::after {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--color-three);
+  border: 3px solid white;
+  box-shadow: 0 0 0 2px var(--color-three);
+  z-index: 1;
+}
+
+.exp-parallel-group .exp-card {
+  max-width: 180px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease;
+}
+
+.exp-parallel-group.visible .exp-card {
+  opacity: 1;
+  transform: translateY(0);
+}
