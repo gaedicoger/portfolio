@@ -2,56 +2,68 @@
   "projects": [
     {
       "title": "Adaquiz",
+      "team": "équipe",
       "icon": "fa-solid fa-circle-question",
       "img": "images/projets/Adaquiz.png",
       "tags": ["HTML/CSS", "JS"],
       "desc": "Quiz en ligne sur les femmes dans la tech, réalisé en équipe, debugs, algorithmie.",
+      "wip": false,
       "link": "https://gaedicoger.github.io/Adaquiz/",
       "color": "linear-gradient(135deg,#f3e5f5,#ce93d8)"
     },
     {
       "title": "Open Météo",
+      "team": "solo",
       "icon": "fa-solid fa-cloud-sun",
       "img": "images/projets/Open_Meteo.png",
       "tags": ["JS", "API"],
       "desc": "App météo temps réel utilisant l'API Open Météo.",
+      "wip": false,
       "link": "https://gaedicoger.github.io/Open_Meteo/",
       "color": "linear-gradient(135deg,#e3f2fd,#90caf9)"
     },
     {
       "title": "Adataviz",
+      "team": "solo",
       "icon": "fa-solid fa-tree",
       "img": "images/projets/Adataviz.png",
       "tags": ["JS", "API", "React"],
       "desc": "Application de consultation du patrimoine arboré de Nantes Métropole avec carte interactive.",
+      "wip": false,
       "link": "https://gaedicoger.github.io/adataviz/",
       "color": "linear-gradient(135deg,#e8f5e9,#a5d6a7)"
     },
     {
       "title": "Adashboard",
+      "team": "solo",
       "icon": "fa-solid fa-chart-line",
       "img": "images/projets/Adashboard.png",
       "tags": ["PostgreSQL", "React", "Express.js"],
       "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
+      "wip": false,
       "link": "https://adashboard-delta.vercel.app",
       "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
     },
     {
       "title": "Sprout",
+      "team": "équipe",
       "icon": "fa-solid fa-seedling",
       "img": "images/projets/Sprout.png",
       "tags": ["PostgreSQL", "React", "Express.js"],
-      "desc": "Application de sgestion des tâches en famille",
-      "link": "En cours de production",
+      "desc": "Application de gestion des tâches en famille",
+      "wip": true,
+      "link": "https://github.com/elodie-sevestre/ada-projet-lovelace-family",
       "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
     },
     {
       "title": "CraftGest",
+      "team": "solo",
       "icon": "fa-solid fa-boxes-stacked",
       "img": "images/projets/default.jpg",
       "tags": ["React", "Java", "Springboot", "PostgreSQL"],
       "desc": "Application de gestion des stocks pour une artisane",
-      "link": "En cours de production",
+      "wip": true,
+      "link": "",
       "color": "linear-gradient(135deg,#fde8ec,#ffc0cb)"
     }
   ],

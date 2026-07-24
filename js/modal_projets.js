@@ -24,7 +24,28 @@ function setupModal() {
 function openModal(p) {
   document.getElementById("m-title").textContent = p.title;
   document.getElementById("m-desc").textContent = p.desc;
-  document.getElementById("m-link").href = p.link;
+
+  // Badge "en cours" — indépendant du lien
+  const existingBadge = document.querySelector(".badge-wip");
+  if (existingBadge) existingBadge.remove();
+  if (p.wip) {
+    document
+      .getElementById("m-title")
+      .insertAdjacentHTML(
+        "afterend",
+        "<span class='badge-wip'>🚧 En cours de production</span>",
+      );
+  }
+
+  // Lien — indépendant du badge
+  const link = document.getElementById("m-link");
+  if (p.link) {
+    link.href = p.link;
+    link.textContent = "Voir le projet →";
+    link.style.display = "inline-block";
+  } else {
+    link.style.display = "none";
+  }
 
   const modalImg = document.getElementById("m-img");
 
@@ -46,5 +67,22 @@ function openModal(p) {
     modalImg.onclick = null;
   }
 
+  const existingTeam = document.querySelector(".badge-team");
+  if (existingTeam) existingTeam.remove();
+  if (p.team === "équipe") {
+    document
+      .getElementById("m-title")
+      .insertAdjacentHTML(
+        "afterend",
+        "<span class='badge-team'>👥 Projet d'équipe</span>",
+      );
+  } else {
+    document
+      .getElementById("m-title")
+      .insertAdjacentHTML(
+        "afterend",
+        "<span class='badge-team'>🧑‍💻 Projet solo</span>",
+      );
+  }
   document.getElementById("modal").classList.add("open");
 }
