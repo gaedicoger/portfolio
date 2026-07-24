@@ -126,7 +126,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   font-size: 1rem;
-  color: #636363;
+  color: var(--color-grey);
   padding: 0.2rem;
   margin-top: auto;
 }

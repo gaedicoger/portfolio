@@ -159,6 +159,6 @@
 
 .exp-structure {
   font-size: 0.72rem;
-  color: #aaa;
+  color: var(--color-grey);
   font-family: open-sauce-light;
 }

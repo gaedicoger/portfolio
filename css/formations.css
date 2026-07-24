@@ -109,7 +109,7 @@
 .tcard-school {
   font-size: 0.8rem;
   font-weight: bold;
-  color: #7a7a7a;
+  color: var(--color-grey);
   line-height: 1.3;
 }
 
