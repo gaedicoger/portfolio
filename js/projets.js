@@ -25,7 +25,7 @@ function setupCarousel(data, trackId, dotsId, prevId, nextId) {
       <i class="card-icon ${item.icon}"></i>
       <div class="card-title">${item.title}</div>
       <div class="card-tags">${item.tags.map((t) => `<span class="card-tag">${t}</span>`).join(" ")}</div>
-      <p class="card-hint">🖱 Clique pour le détail</p>
+      <p class="card-hint">🖱 En savoir plus</p>
     `;
     // Clic sur la carte active → modale / clic sur une autre → navigation
     card.addEventListener("click", () => {
