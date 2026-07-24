@@ -3,15 +3,13 @@
 // Organise les expériences en rangées de 4
 // qui alternent gauche/droite comme un jeu de plateau
 // Seules les expériences pro sont affichées
-// (visible: true ET type !== "formation")
+// (visible: true )
 // =====================
 function setupParcours(parcours) {
   const track = document.getElementById("serpentin-track");
 
   // Filtre : visible ET pas une formation
-  const visible = parcours.filter(
-    (item) => item.visible && item.type !== "formation",
-  );
+  const visible = parcours.filter((item) => item.visible);
 
   const plateau = document.createElement("div");
   plateau.className = "plateau";
