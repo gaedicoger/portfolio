@@ -1,15 +1,6 @@
 {
   "projects": [
     {
-      "title": "Portfolio Dev",
-      "icon": "fa-solid fa-laptop-code",
-      "img": "images/projets/default.jpg",
-      "tags": ["HTML/CSS", "JS"],
-      "desc": "Mon portfolio multi-profil avec animations et scroll snap.",
-      "link": "https://github.com",
-      "color": "linear-gradient(135deg,#fde8ec,#ffc0cb)"
-    },
-    {
       "title": "Adaquiz",
       "icon": "fa-solid fa-circle-question",
       "img": "images/projets/Adaquiz.png",
@@ -38,6 +29,15 @@
     },
     {
       "title": "Adashboard",
+      "icon": "fa-solid fa-chart-line",
+      "img": "images/projets/Adashboard.png",
+      "tags": ["SQL", "PostgreSQL", "React", "Express.js"],
+      "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
+      "link": "https://adashboard-delta.vercel.app",
+      "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
+    },
+    {
+      "title": "Sprout",
       "icon": "fa-solid fa-chart-line",
       "img": "images/projets/Adashboard.png",
       "tags": ["SQL", "PostgreSQL", "React", "Express.js"],
