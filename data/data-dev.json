@@ -1,6 +1,17 @@
 {
   "projects": [
     {
+      "title": "Sprout Quest",
+      "team": "équipe",
+      "icon": "fa-solid fa-seedling",
+      "img": "images/projets/Sprout.png",
+      "tags": ["PostgreSQL", "React", "Express.js"],
+      "desc": "Gestion des tâches en famille - Gamification",
+      "wip": true,
+      "link": "https://github.com/elodie-sevestre/ada-projet-lovelace-family",
+      "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
+    },
+    {
       "title": "Adaquiz",
       "team": "équipe",
       "icon": "fa-solid fa-circle-question",
@@ -42,17 +53,6 @@
       "desc": "Application de suivi d'acquisition de compétences, base de données relationnelle.",
       "wip": false,
       "link": "https://adashboard-delta.vercel.app",
-      "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
-    },
-    {
-      "title": "Sprout",
-      "team": "équipe",
-      "icon": "fa-solid fa-seedling",
-      "img": "images/projets/Sprout.png",
-      "tags": ["PostgreSQL", "React", "Express.js"],
-      "desc": "Application de gestion des tâches en famille",
-      "wip": true,
-      "link": "https://github.com/elodie-sevestre/ada-projet-lovelace-family",
       "color": "linear-gradient(135deg,#fff3e0,#ffd59e)"
     },
     {
