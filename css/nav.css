@@ -131,3 +131,71 @@ nav {
 #btn-top.visible {
   opacity: 1;
 }
+
+/*Enveloppe flottante */
+
+#floating-envelope {
+  position: fixed;
+  top: 10rem; /* juste sous la nav */
+  right: 3rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 999;
+  color: var(--color-two);
+  animation: bob 3s ease-in-out infinite;
+  filter: drop-shadow(0 4px 8px rgba(253,77,103,0.3));
+  transition: transform 0.2s, filter 0.2s;
+  user-select: none;
+}
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+
+#floating-envelope:hover {
+  transform: scale(1.2) !important;
+  filter: drop-shadow(0 6px 14px rgba(253,77,103,0.5));
+  animation-play-state: paused;
+}
+
+#floating-envelope::after {
+  content: "Copier mon email";
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-one);
+  color: white;
+  font-size: 0.65rem;
+  font-family: open-sauce-light;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity 0.2s;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+#floating-envelope:hover::after {
+  opacity: 1;
+}
+
+#copy-toast {
+  position: fixed;
+  top: 9rem;
+  right: 2rem;
+  background: var(--color-two);
+  color: white;
+  font-size: 0.8rem;
+  font-family: open-sauce-light;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  pointer-events: none;
+  z-index: 999;
+}
+
+#copy-toast.show { opacity: 1; }
