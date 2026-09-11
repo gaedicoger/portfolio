@@ -73,13 +73,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       window.addEventListener("wheel", (e) => {
         if (isScrolling) return;
+        if (Math.abs(e.deltaY) < 30) return; // ← filtre les micro-mouvements trackpad
         if (e.deltaY > 0 && currentIndex < sections.length - 1) currentIndex++;
         else if (e.deltaY < 0 && currentIndex > 0) currentIndex--;
         sections[currentIndex].scrollIntoView({ behavior: "smooth" });
         isScrolling = true;
         setTimeout(() => {
-          isScrolling = false;
-        }, 800);
+        isScrolling = false;
+        }, 1200); // ← augmente le verrou de 800 à 1200ms
       });
 
       window.onbeforeunload = () => window.scrollTo(0, 0);
