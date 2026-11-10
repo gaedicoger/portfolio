@@ -136,8 +136,9 @@ nav {
 
 #floating-envelope {
   position: fixed;
-  top: 10rem; /* juste sous la nav */
-  right: 3rem;
+  bottom: 2rem; /* juste sous la nav */
+  left: 10%;
+  transform: translateX(-50%);
   font-size: 1.8rem;
   cursor: pointer;
   z-index: 999;
